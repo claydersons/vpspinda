@@ -65,6 +65,8 @@ then
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 	cd script
 	chmod +x script.sh && ./script.sh
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/addhost.sh -O /bin/addhost
+	chmod +x /bin/addhost
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/ssltunnel.sh -O /bin/ssltunnel
 	chmod +x /bin/ssltunnel
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/stunnel.sh -O /bin/stunnel
