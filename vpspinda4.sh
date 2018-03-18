@@ -63,10 +63,28 @@ then
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	cd script
-	chmod +x script.sh && ./script.sh
 	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/ajuda.sh -O /bin/ajuda
+	chmod +x /bin/ajuda
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/alterarlimite.sh -O /bin/alterarlimite
+	chmod +x /bin/alterarlimite
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/alterarsenha.sh -O /bin/alterarsenha
+	chmod +x /bin/alterarsenha
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/delhost.sh -O /bin/delhost
+	chmod +x /bin/delhost
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/criarusuario2.sh -O /bin/criarusuario
+	chmod +x /bin/criarusuario
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/expcleaner2.sh -O /bin/expcleaner
+	chmod +x /bin/expcleaner
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/mudardata.sh -O /bin/mudardata
+	chmod +x /bin/mudardata
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/remover.sh -O /bin/remover
+	chmod +x /bin/remover
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/sshlimiter2.sh -O /bin/sshlimiter
+	chmod +x /bin/sshlimiter
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/sshmonitor2.sh -O /bin/sshmonitor
+	chmod +x /bin/sshmonitor
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/ssltunnel.sh -O /bin/ssltunnel
 	chmod +x /bin/ssltunnel
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/stunnel.sh -O /bin/stunnel
@@ -104,8 +122,28 @@ then
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	cd script
-	chmod +x script.sh && ./script.sh
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/addhost.sh -O /bin/addhost
+	chmod +x /bin/addhost
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/ajuda.sh -O /bin/ajuda
+	chmod +x /bin/ajuda
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/alterarlimite.sh -O /bin/alterarlimite
+	chmod +x /bin/alterarlimite
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/alterarsenha.sh -O /bin/alterarsenha
+	chmod +x /bin/alterarsenha
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/delhost.sh -O /bin/delhost
+	chmod +x /bin/delhost
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/criarusuario2.sh -O /bin/criarusuario
+	chmod +x /bin/criarusuario
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/expcleaner2.sh -O /bin/expcleaner
+	chmod +x /bin/expcleaner
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/mudardata.sh -O /bin/mudardata
+	chmod +x /bin/mudardata
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/remover.sh -O /bin/remover
+	chmod +x /bin/remover
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/sshlimiter2.sh -O /bin/sshlimiter
+	chmod +x /bin/sshlimiter
+	wget https://raw.githubusercontent.com/claydersons/vpspinda/master/sshmonitor2.sh -O /bin/sshmonitor
+	chmod +x /bin/sshmonitor
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/ssltunnel.sh -O /bin/ssltunnel
 	chmod +x /bin/ssltunnel
 	wget https://raw.githubusercontent.com/claydersons/MNHVPSSSL/master/stunnel.sh -O /bin/stunnel
