@@ -44,7 +44,7 @@ yum update -y
 yum upgrade -y
 rm -f /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/listar /bin/sshmonitor /bin/ajuda > /dev/null
 rm -f /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh > /dev/null
-apt-get install squid3 bc screen nano unzip dos2unix wget -y
+yum install squid3 bc screen nano unzip dos2unix wget -y
 
 
 if [ -f "/usr/sbin/ufw" ] ; then
