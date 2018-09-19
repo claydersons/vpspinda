@@ -48,7 +48,7 @@ if [[ "$resposta" = 's' ]]; then
 	cd ..
 	rm -r badvpn-build
 	echo "#!/bin/bash
-	badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 512 --max-connections-for-client 8" > /bin/badudp
+	badvpn-udpgw --listen-addr 127.0.0.1:5525 --max-clients 512 --max-connections-for-client 8" > /bin/badudp
 	chmod +x /bin/badudp
 	clear
 	tput setaf 3 ; tput bold ; echo ""
