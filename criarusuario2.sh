@@ -30,7 +30,7 @@ else
 					tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um nome de usuário vazio!" ; echo "" ; tput sgr0
 					exit 1
 				else	
-					tput setaf 7 ; read -p "Senha: " password ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
+					tput setaf 7 ; read -p "Senha: " -s password ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
 					if [[ -z $password ]]
 					then
 						tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou uma senha vazia!" ; echo "" ; tput sgr0
