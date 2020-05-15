@@ -1,7 +1,7 @@
 #!/bin/bash
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-15s\n' "Criar Usuário SSH" ; tput sgr0
-echo ""
-read -p "Nome do usuário: " username
+echo "" ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
+tput setaf 7 ; read -p "Nome do usuário: " username ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
 awk -F : ' { print $1 }' /etc/passwd > /tmp/users 
 if grep -Fxq "$username" /tmp/users
 then
@@ -30,7 +30,7 @@ else
 					tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um nome de usuário vazio!" ; echo "" ; tput sgr0
 					exit 1
 				else	
-					read -p "Senha: " password
+					tput setaf 7 ; read -p "Senha: " password ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
 					if [[ -z $password ]]
 					then
 						tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou uma senha vazia!" ; echo "" ; tput sgr0
@@ -42,7 +42,7 @@ else
 							tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou uma senha muito curta!" ; echo "Para manter o usuário seguro use no mínimo 6 caracteres" ; echo "combinando diferentes letras e números!" ; echo "" ; tput sgr0
 							exit 1
 						else	
-							read -p "Dias para expirar: " dias
+							tput setaf 7 ; read -p "Dias para expirar: " dias ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
 							if (echo $dias | egrep '[^0-9]' &> /dev/null)
 							then
 								tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um número de dias inválido!" ; echo "" ; tput sgr0
@@ -58,7 +58,7 @@ else
 										tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você deve digitar um número de dias maior que zero!" ; echo "" ; tput sgr0
 										exit 1
 									else
-										read -p "Nº de conexões simultâneas permitidas: " sshlimiter
+										tput setaf 7 ; read -p "Nº de conexões simultâneas permitidas: " sshlimiter ; tput sgr0 ; tput setaf 1 ; seq -s "#" 45 | tr -d [:digit:] ; tput sgr0 ;
 										if (echo $sshlimiter | egrep '[^0-9]' &> /dev/null)
 										then
 											tput setaf 7 ; tput setab 4 ; tput bold ; echo "" ; echo "Você digitou um número de conexões inválido!" ; echo "" ; tput sgr0
